@@ -10,4 +10,5 @@ RUN apk --update add mysql-client aws-cli \
     && curl -L $DOWNLOAD_URL | tar -xz -C /tmp/download \
     && mv /tmp/download/docker/docker /usr/local/bin/ \
     && rm -rf /tmp/download \
-    && rm -rf /var/cache/apk/*
+    && rm -rf /var/cache/apk/* \
+    && composer global require hirak/prestissimo
